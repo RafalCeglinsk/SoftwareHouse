@@ -1,8 +1,4 @@
 .ourteam {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	gap: 30px;
 	&--header {
 		color: var(--text-color-black);
 		font-weight: 700;
@@ -11,9 +7,12 @@
 		text-align: center;
 		letter-spacing: 0.03em;
 		margin-bottom: 50px;
+		margin-top: 60px;
 	}
 	&--box {
 		background-color: var(--ourteam-background-grey);
+		padding-bottom: 30px;
+		padding-top: 30px;
 	}
 	&__teammate {
 		box-shadow: 0px 4px 4px var(--box-shadow);
@@ -27,10 +26,9 @@
 			color: var(--text-color-black);
 			letter-spacing: 0.03em;
 			text-align: center;
-			padding-bottom: 10px;
 		}
 		&--figcaption {
-			padding: 30px 0px;
+			padding-bottom: 24px;
 		}
 		&--job {
 			font-weight: 400;
@@ -39,7 +37,6 @@
 			color: var(--text-color-grey);
 			letter-spacing: 0.03em;
 			text-align: center;
-			margin-bottom: 16px;
 		}
 	}
 }
@@ -47,23 +44,25 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
-	gap: 10px;
 	fill: var(--icon-color-grey);
+	padding-left: 0px;
+	gap: 10px;
 	&__link {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 44px;
 		height: 44px;
-		cursor: pointer;
 		border-radius: 50%;
-		&:focus,
-		&:hover {
-			fill: white;
-			background-color: var(--background-color-blue);
-			transition: 250ms;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.ourteam {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 100%;
+		&__teammate {
+			flex-basis: calc((100% - 30px) / 2);
 		}
 	}
 }

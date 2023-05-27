@@ -3,10 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="width=<device-width>, initial-scale=1.0"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link
 			rel="stylesheet"
@@ -25,13 +22,74 @@
 	</head>
 	<body>
 		<header>
-			<!-- logo top -->
+			<div class="mobile-container">
+				<button
+					class="menu-toggle js-open-menu"
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+				>
+					<svg
+						width="40"
+						height="40"
+						fill="currentColor"
+						viewBox="0 0 20 20"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+							clip-rule="evenodd"
+						></path>
+					</svg>
+				</button>
+			</div>
+			<div class="menu-container js-menu-container" id="mobile-menu">
+				<button class="menu-toggle js-close-menu">
+					<svg
+						fill="currentColor"
+						viewBox="0 0 20 20"
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+							clip-rule="evenodd"
+						></path>
+					</svg>
+				</button>
+
+				<ul class="mobile__nav">
+					<li><a href="" class="mobile__nav--link">Agencja</a></li>
+					<li><a href="" class="mobile__nav--link">Portfolio</a></li>
+					<li><a href="" class="mobile__nav--link">Kontakt</a></li>
+				</ul>
+				<div class="mobile__contact">
+					<a class="mobile__contact--phone" href="tel:+48111111111"
+						>+48&nbsp;111&nbsp;111&nbsp;111</a
+					>
+					<a
+						class="mobile__contact--email"
+						href="mailto:info@devstudio.com"
+						>info@devstudio.com</a
+					>
+				</div>
+				<ul class="mobile__socials">
+					<li><a href="mobile__socials--link">Instagram</a></li>
+					<span class="mobile__socials--border"></span>
+					<li><a href="mobile__socials--link">Twitter</a></li>
+					<span class="mobile__socials--border"></span>
+					<li><a href="mobile__socials--link">Facebook</a></li>
+					<span class="mobile__socials--border"></span>
+					<li><a href="mobile__socials--link">Linkedin</a></li>
+				</ul>
+			</div>
 			<div class="container">
 				<div class="header">
 					<a class="header__logo--blue" href="index.html"
 						><span class="header__logo--dark">Web</span>Studio</a
 					>
-					<!-- nav items-->
 					<nav>
 						<div>
 							<ul class="navigation">
@@ -59,7 +117,6 @@
 							</ul>
 						</div>
 					</nav>
-					<!-- adress top-->
 					<div class="contact">
 						<a
 							class="contact__email"
@@ -84,7 +141,6 @@
 				</div>
 			</div>
 		</header>
-		<!-- HERO -->
 		<main>
 			<section class="main">
 				<div class="main__box">
@@ -99,11 +155,10 @@
 					</button>
 				</div>
 			</section>
-			<!-- Lorem List-->
 			<section class="container">
 				<div class="ourperks">
-					<ul class="ourperks__list">
-						<li>
+					<div class="ourperks__list">
+						<div class="ourperks__tablet">
 							<div class="perk">
 								<svg
 									width="70"
@@ -122,8 +177,8 @@
 								adipiscing elit. Nam vel arcu sem. Sed non
 								sodales dui. Interdum et malesuada
 							</p>
-						</li>
-						<li>
+						</div>
+						<div class="ourperks__tablet">
 							<div class="perk">
 								<svg
 									width="70"
@@ -142,8 +197,8 @@
 								adipiscing elit. Nam vel arcu sem. Sed non
 								sodales dui. Interdum et malesuada
 							</p>
-						</li>
-						<li>
+						</div>
+						<div class="ourperks__tablet">
 							<div class="perk">
 								<svg
 									width="70"
@@ -162,8 +217,8 @@
 								adipiscing elit. Nam vel arcu sem. Sed non
 								sodales dui. Interdum et malesuada
 							</p>
-						</li>
-						<li>
+						</div>
+						<div class="ourperks__tablet">
 							<div class="perk">
 								<svg
 									width="70"
@@ -182,12 +237,10 @@
 								adipiscing elit. Nam vel arcu sem. Sed non
 								sodales dui. Interdum et malesuada
 							</p>
-						</li>
-					</ul>
+						</div>
+					</div>
 				</div>
 			</section>
-
-			<!-- What We Do -->
 			<section class="sections container">
 				<h3 class="whatwedo--header">Czym się zajmujemy</h3>
 				<div class="whatwedo">
@@ -226,384 +279,338 @@
 					</figure>
 				</div>
 			</section>
-			<!-- Our Team -->
-			<section class="sections ourteam--box">
-				<div class="container">
-					<h2 class="ourteam--header">Nasz zespół</h2>
-					<div class="ourteam">
-						<figure class="ourteam__teammate">
-							<img
-								src="./images/Zdjecie1.jpg"
-								width="270"
-								height="260"
-								alt="Product Designer"
-							/>
-							<figcaption class="ourteam__teammate--figcaption">
-								<h4 class="ourteam__teammate--name">
-									John Doe
-								</h4>
-								<p class="ourteam__teammate--job">
-									Product Designer
-								</p>
-								<div>
-									<ul class="social-links">
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-instagram-2"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-twitter-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-facebook-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-linkedin-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</figcaption>
-						</figure>
-						<figure class="ourteam__teammate">
-							<img
-								src="./images/Zdjecie2.jpg"
-								width="270"
-								height="260"
-								alt="Frontend Developer"
-							/>
-							<figcaption class="ourteam__teammate--figcaption">
-								<h4 class="ourteam__teammate--name">
-									John Doe
-								</h4>
-								<p class="ourteam__teammate--job">
-									Frontend Developer
-								</p>
-								<div>
-									<ul class="social-links">
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-instagram-2"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-twitter-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-facebook-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-linkedin-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</figcaption>
-						</figure>
-						<figure class="ourteam__teammate">
-							<img
-								src="./images/Zdjecie3.jpg"
-								width="270"
-								height="260"
-								alt="Marketing"
-							/>
-							<figcaption class="ourteam__teammate--figcaption">
-								<h4 class="ourteam__teammate--name">
-									John Doe
-								</h4>
-								<p class="ourteam__teammate--job">Marketing</p>
-								<div>
-									<ul class="social-links">
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-instagram-2"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-twitter-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-facebook-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-linkedin-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</figcaption>
-						</figure>
-						<figure class="ourteam__teammate">
-							<img
-								src="./images/Zdjecie4.jpg"
-								width="270"
-								height="260"
-								alt="UI Designer"
-							/>
-							<figcaption class="ourteam__teammate--figcaption">
-								<h4 class="ourteam__teammate--name">
-									John Doe
-								</h4>
-								<p class="ourteam__teammate--job">
-									UI Designer
-								</p>
-								<div>
-									<ul class="social-links">
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-instagram-2"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-twitter-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-facebook-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												target="blank"
-												class="social-links__link"
-											>
-												<svg width="22" height="22">
-													<use
-														href="./images/icons.svg#icon-linkedin-1"
-													></use>
-												</svg>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</figcaption>
-						</figure>
-					</div>
-				</div>
-			</section>
-			<section class="sections container">
-				<h2 class="our-customers">Nasi Klienci</h2>
-				<ul class="customers__list">
-					<li>
-						<a
-							href="#"
-							target="blank"
-							class="customers__list--client"
-						>
-							<svg width="41" height="46" viewBox="0 0 32 32">
-								<use
-									href="./images/icons.svg#icon-client1"
-								></use>
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a
-							href="#"
-							target="blank"
-							class="customers__list--client"
-						>
-							<svg width="40" height="52">
-								<use
-									href="./images/icons.svg#icon-client2"
-								></use>
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a
-							href="#"
-							target="blank"
-							class="customers__list--client"
-						>
-							<svg width="43" height="41">
-								<use
-									href="./images/icons.svg#icon-client3"
-								></use>
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a
-							href="#"
-							target="blank"
-							class="customers__list--client"
-						>
-							<svg width="84" height="40">
-								<use
-									href="./images/icons.svg#icon-client4"
-								></use>
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a
-							href="#"
-							target="blank"
-							class="customers__list--client"
-						>
-							<svg width="62" height="45">
-								<use
-									href="./images/icons.svg#icon-client5"
-								></use>
-							</svg>
-						</a>
-					</li>
-					<li>
-						<a
-							href="#"
-							target="blank"
-							class="customers__list--client"
-						>
-							<svg width="93" height="43">
-								<use
-									href="./images/icons.svg#icon-client6"
-								></use>
-							</svg>
-						</a>
-					</li>
-				</ul>
-			</section>
 		</main>
+		<section class="sections ourteam--box">
+			<div class="container">
+				<h2 class="ourteam--header">Nasz zespół</h2>
+				<div class="ourteam">
+					<figure class="ourteam__teammate">
+						<img
+							src="./images/Zdjecie1.jpg"
+							width="270"
+							height="260"
+							alt="Product Designer"
+						/>
+						<figcaption class="ourteam__teammate--figcaption">
+							<h4 class="ourteam__teammate--name">John Doe</h4>
+							<p class="ourteam__teammate--job">
+								Product Designer
+							</p>
+							<div>
+								<ul class="social-links">
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-instagram-2"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-twitter-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-facebook-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-linkedin-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</figcaption>
+					</figure>
+					<figure class="ourteam__teammate">
+						<img
+							src="./images/Zdjecie2.jpg"
+							width="270"
+							height="260"
+							alt="Frontend Developer"
+						/>
+						<figcaption class="ourteam__teammate--figcaption">
+							<h4 class="ourteam__teammate--name">John Doe</h4>
+							<p class="ourteam__teammate--job">
+								Frontend Developer
+							</p>
+							<div>
+								<ul class="social-links">
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-instagram-2"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-twitter-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-facebook-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-linkedin-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</figcaption>
+					</figure>
+					<figure class="ourteam__teammate">
+						<img
+							src="./images/Zdjecie3.jpg"
+							width="270"
+							height="260"
+							alt="Marketing"
+						/>
+						<figcaption class="ourteam__teammate--figcaption">
+							<h4 class="ourteam__teammate--name">John Doe</h4>
+							<p class="ourteam__teammate--job">Marketing</p>
+							<div>
+								<ul class="social-links">
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-instagram-2"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-twitter-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-facebook-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-linkedin-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</figcaption>
+					</figure>
+					<figure class="ourteam__teammate">
+						<img
+							src="./images/Zdjecie4.jpg"
+							width="270"
+							height="260"
+							alt="UI Designer"
+						/>
+						<figcaption class="ourteam__teammate--figcaption">
+							<h4 class="ourteam__teammate--name">John Doe</h4>
+							<p class="ourteam__teammate--job">UI Designer</p>
+							<div>
+								<ul class="social-links">
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-instagram-2"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-twitter-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-facebook-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a
+											href="#"
+											target="blank"
+											class="social-links__link"
+										>
+											<svg width="22" height="22">
+												<use
+													href="./images/icons.svg#icon-linkedin-1"
+												></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+		<section class="sections container">
+			<h2 class="our-customers">Nasi Klienci</h2>
+			<ul class="customers__list">
+				<li class="customers__list--tablet">
+					<a href="#" target="blank" class="customers__list--client">
+						<svg width="41" height="46" viewBox="0 0 32 32">
+							<use href="./images/icons.svg#icon-client1"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="customers__list--tablet">
+					<a href="#" target="blank" class="customers__list--client">
+						<svg width="40" height="52">
+							<use href="./images/icons.svg#icon-client2"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="customers__list--tablet">
+					<a href="#" target="blank" class="customers__list--client">
+						<svg width="43" height="41">
+							<use href="./images/icons.svg#icon-client3"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="customers__list--tablet">
+					<a href="#" target="blank" class="customers__list--client">
+						<svg width="84" height="40">
+							<use href="./images/icons.svg#icon-client4"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="customers__list--tablet">
+					<a href="#" target="blank" class="customers__list--client">
+						<svg width="62" height="45">
+							<use href="./images/icons.svg#icon-client5"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="customers__list--tablet">
+					<a href="#" target="blank" class="customers__list--client">
+						<svg width="93" height="43">
+							<use href="./images/icons.svg#icon-client6"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<!-- </main> -->
 		<!-- adress -->
 		<footer class="footer-effect">
 			<div class="footer-container container">
@@ -814,5 +821,6 @@
 			</div>
 		</div>
 		<script src="./js/modal.js"></script>
+		<script defer src="./js/mobile-menu.js"></script>
 	</body>
 </html>
