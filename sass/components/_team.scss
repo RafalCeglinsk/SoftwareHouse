@@ -1,4 +1,18 @@
 .ourteam {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	@include tablet {
+		flex-direction: row;
+		flex-wrap: wrap;
+		&__teammate {
+			flex-basis: calc((100% - 30px) / 2);
+		}
+	}
+	@include desktop {
+		flex-wrap: nowrap;
+		flex-direction: row;
+	}
 	&--header {
 		color: var(--text-color-black);
 		font-weight: 700;
@@ -13,6 +27,9 @@
 		background-color: var(--ourteam-background-grey);
 		padding-bottom: 30px;
 		padding-top: 30px;
+		@include desktop {
+			padding-bottom: 60px;
+		}
 	}
 	&__teammate {
 		box-shadow: 0px 4px 4px var(--box-shadow);
@@ -26,6 +43,7 @@
 			color: var(--text-color-black);
 			letter-spacing: 0.03em;
 			text-align: center;
+			padding-top: 30px;
 		}
 		&--figcaption {
 			padding-bottom: 24px;
@@ -37,12 +55,14 @@
 			color: var(--text-color-grey);
 			letter-spacing: 0.03em;
 			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 16px;
 		}
 	}
 }
+
 .social-links {
 	display: flex;
-	flex-direction: row;
 	justify-content: center;
 	fill: var(--icon-color-grey);
 	padding-left: 0px;
@@ -54,15 +74,12 @@
 		width: 44px;
 		height: 44px;
 		border-radius: 50%;
-	}
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-	.ourteam {
-		display: flex;
-		flex-wrap: wrap;
-		max-width: 100%;
-		&__teammate {
-			flex-basis: calc((100% - 30px) / 2);
+		&:focus,
+		&:hover {
+			fill: white;
+			background-color: var(--background-color-blue);
+			transition: 250ms;
+			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 		}
 	}
 }

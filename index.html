@@ -61,9 +61,19 @@
 				</button>
 
 				<ul class="mobile__nav">
-					<li><a href="" class="mobile__nav--link">Agencja</a></li>
-					<li><a href="" class="mobile__nav--link">Portfolio</a></li>
-					<li><a href="" class="mobile__nav--link">Kontakt</a></li>
+					<div class="mobile__nav--is-active">
+						<li>
+							<a href="" class="mobile__nav--link">Agencja</a>
+						</li>
+					</div>
+					<li>
+						<a href="portfolio.html" class="mobile__nav--link"
+							>Portfolio</a
+						>
+					</li>
+					<li>
+						<a href="" class="mobile__nav--link">Kontakt</a>
+					</li>
 				</ul>
 				<div class="mobile__contact">
 					<a class="mobile__contact--phone" href="tel:+48111111111"
@@ -76,13 +86,21 @@
 					>
 				</div>
 				<ul class="mobile__socials">
-					<li><a href="mobile__socials--link">Instagram</a></li>
+					<li>
+						<a href="#" class="mobile__socials--link">Instagram</a>
+					</li>
+					<span a href="#" class="mobile__socials--link"></span>
+					<li>
+						<a href="#" class="mobile__socials--link">Twitter</a>
+					</li>
 					<span class="mobile__socials--border"></span>
-					<li><a href="mobile__socials--link">Twitter</a></li>
+					<li>
+						<a href="#" class="mobile__socials--link">Facebook</a>
+					</li>
 					<span class="mobile__socials--border"></span>
-					<li><a href="mobile__socials--link">Facebook</a></li>
-					<span class="mobile__socials--border"></span>
-					<li><a href="mobile__socials--link">Linkedin</a></li>
+					<li>
+						<a href="#" class="mobile__socials--link">Linkedin</a>
+					</li>
 				</ul>
 			</div>
 			<div class="container">
@@ -287,9 +305,18 @@
 					<figure class="ourteam__teammate">
 						<img
 							src="./images/Zdjecie1.jpg"
+							alt="Mężczyzna w okularach"
 							width="270"
 							height="260"
-							alt="Product Designer"
+							srcset="
+								images/team/mobilemate1-270.jpg  270w,
+								images/team/mobilemate1-354.jpg  354w,
+								images/team/tabletmate1-450.jpg  450w,
+								images/team/tabletmate1-540.jpg  540w,
+								images/team/desktopmate1-708.jpg 708w,
+								images/team/desktopmate1-900.jpg 900w
+							"
+							sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
 						/>
 						<figcaption class="ourteam__teammate--figcaption">
 							<h4 class="ourteam__teammate--name">John Doe</h4>
@@ -357,9 +384,18 @@
 					<figure class="ourteam__teammate">
 						<img
 							src="./images/Zdjecie2.jpg"
+							alt="Frontend Developer"
 							width="270"
 							height="260"
-							alt="Frontend Developer"
+							srcset="
+								images/team/mobilemate2-270.jpg  270w,
+								images/team/mobilemate2-354.jpg  354w,
+								images/team/tabletmate2-450.jpg  450w,
+								images/team/tabletmate2-540.jpg  540w,
+								images/team/desktopmate2-708.jpg 708w,
+								images/team/desktopmate2-900.jpg 900w
+							"
+							sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
 						/>
 						<figcaption class="ourteam__teammate--figcaption">
 							<h4 class="ourteam__teammate--name">John Doe</h4>
@@ -430,6 +466,15 @@
 							width="270"
 							height="260"
 							alt="Marketing"
+							srcset="
+								images/team/mobilemate3-270.jpg  270w,
+								images/team/mobilemate3-354.jpg  354w,
+								images/team/tabletmate3-450.jpg  450w,
+								images/team/tabletmate3-540.jpg  540w,
+								images/team/desktopmate3-708.jpg 708w,
+								images/team/desktopmate3-900.jpg 900w
+							"
+							sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
 						/>
 						<figcaption class="ourteam__teammate--figcaption">
 							<h4 class="ourteam__teammate--name">John Doe</h4>
@@ -498,6 +543,15 @@
 							width="270"
 							height="260"
 							alt="UI Designer"
+							srcset="
+								images/team/mobilemate4-270.jpg  270w,
+								images/team/mobilemate4-354.jpg  354w,
+								images/team/tabletmate4-450.jpg  450w,
+								images/team/tabletmate4-540.jpg  540w,
+								images/team/desktopmate4-708.jpg 708w,
+								images/team/desktopmate4-900.jpg 900w
+							"
+							sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
 						/>
 						<figcaption class="ourteam__teammate--figcaption">
 							<h4 class="ourteam__teammate--name">John Doe</h4>
@@ -821,6 +875,12 @@
 			</div>
 		</div>
 		<script src="./js/modal.js"></script>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"
+		></script>
 		<script defer src="./js/mobile-menu.js"></script>
 	</body>
 </html>

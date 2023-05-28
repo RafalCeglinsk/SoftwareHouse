@@ -1,93 +1,93 @@
-@media screen and (max-width: 767px) {
-	ul {
-		list-style-type: none;
-	}
-	a {
-		text-decoration: none;
-	}
-	img {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
-	.navigation {
-		display: none;
-	}
-	.contact {
-		display: none;
-	}
-	body {
-		font-family: "Roboto", sans-serif;
-		background-color: #ffffff;
-	}
+ul {
+	list-style-type: none;
 }
-@media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
-	}
-	.mobile__socials {
-		display: none;
-	}
-	.mobile__contact {
-		display: none;
-	}
-	.mobile__nav {
-		display: none;
-	}
-	ul {
-		list-style-type: none;
-	}
-	a {
-		text-decoration: none;
-	}
-	img {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
-	body {
-		font-family: "Roboto", sans-serif;
-		background-color: #ffffff;
-	}
+a {
+	text-decoration: none;
 }
-@media screen and (min-width: 1200px) {
-	.container {
-		width: 1200px;
-		margin: 0 auto;
-		padding: 0 15px;
-	}
-	body {
-		font-family: "Roboto", sans-serif;
-		background-color: #ffffff;
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.navigation {
+	display: none;
+}
+.contact {
+	display: none;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	background-color: #ffffff;
+	@include desktop {
 		width: 1600px;
 		margin: 0 auto;
 	}
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	max-width: 480px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include tablet {
+		min-width: 768px;
+		max-width: 1200px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+	.menu-toggle {
+		display: none !important;
+	}
+	.whatwedo {
+		display: none !important;
+	}
+	.whatwedo--header {
+		display: none !important;
+	}
 	img {
 		display: block;
+		width: 100%;
+		height: auto;
 	}
+	body {
+		font-family: "Roboto", sans-serif;
+		background-color: #ffffff;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+	}
+}
+@media screen and (min-width: 1200px) {
 	.sections {
 		padding-top: 94px;
 		padding-bottom: 94px;
-	}
-	a {
-		text-decoration: none;
-	}
-	ul {
-		list-style-type: none;
 	}
 	header {
 		border-bottom: 1px solid var(--border-color-grey);
 	}
 	.menu-toggle {
-		display: none;
+		display: none !important;
 	}
-	.mobile__socials {
-		display: none;
+	.container {
+		min-width: 1200px;
 	}
-	.mobile__contact {
-		display: none;
+}
+@media screen and (max-width: 767px) {
+	.navigation {
+		display: none !important;
 	}
-	.mobile__nav {
-		display: none;
+	.contact {
+		display: none !important;
+	}
+	.whatwedo {
+		display: none !important;
+	}
+	.whatwedo--header {
+		display: none !important;
 	}
 }

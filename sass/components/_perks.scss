@@ -3,6 +3,10 @@
 	&__list {
 		gap: 30px;
 	}
+	@include desktop {
+		padding-top: 94px;
+		padding-bottom: 0px;
+	}
 }
 .perk {
 	display: flex;
@@ -21,6 +25,9 @@
 		letter-spacing: 0.03em;
 		padding-bottom: 10px;
 		text-align: center;
+		@include desktop {
+			text-align: left;
+		}
 	}
 	&--description {
 		color: var(--text-color-grey);
@@ -45,6 +52,15 @@
 		}
 		&--description {
 			text-align: left;
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	.ourperks {
+		&__list {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
 		}
 	}
 }
