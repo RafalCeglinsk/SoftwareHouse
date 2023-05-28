@@ -1,8 +1,8 @@
 .header {
 	padding: 16px 15px;
 	&__logo--blue {
-		color: var(--text-color-black);
 		font-family: Raleway;
+		color: var(--text-color-black);
 		font-size: 26px;
 		line-height: 1.2;
 		text-decoration: none;
@@ -10,8 +10,8 @@
 		display: block;
 	}
 	&__logo--dark {
-		color: var(--text-color-blue);
 		font-family: Raleway;
+		color: var(--text-color-blue);
 		font-weight: 700;
 		font-size: 26px;
 		line-height: 1.2;
@@ -29,7 +29,7 @@
 }
 .main {
 	margin: 0 auto;
-	padding: 118px 0;
+	padding: 10px 0;
 	background-image: linear-gradient(
 			to top,
 			rgba(47, 48, 58, 0.4),
@@ -47,6 +47,9 @@
 				rgba(47, 48, 58, 0.4)
 			),
 			url(../images/background/backgroundMobile@2x.jpg);
+	}
+	@include desktop {
+		padding: 110px 0;
 	}
 	&__box {
 		display: flex;
@@ -87,10 +90,13 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		justify-content: space-between;
 	}
 	.navigation {
 		display: flex;
 		margin-left: 83px;
+		margin-top: 4px;
+
 		&__item {
 			color: var(--text-color-black);
 			font-weight: 500;
@@ -98,24 +104,22 @@
 			line-height: 1.14;
 			letter-spacing: 0.02em;
 			margin-right: 60px;
+			@include desktop {
+				margin-left: 0;
+			}
+
 			&:hover {
 				color: var(--hover-color-blue);
 				transition: 250ms;
 				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 			}
-			@include desktop {
-				margin-left: 0;
-			}
 		}
 		&__item--margin {
-			font-family: "Roboto";
-			font-style: normal;
 			color: var(--text-color-black);
 			font-weight: 500;
 			font-size: 14px;
 			line-height: 1.14;
 			letter-spacing: 0.02em;
-			margin-right: 101px;
 			&:hover,
 			&:focus {
 				color: var(--hover-color-blue);
@@ -136,6 +140,7 @@
 		&__is-active &__item {
 			position: relative;
 			color: var(--text-color-blue);
+
 			&:focus {
 				color: var(--hover-color-blue);
 				transition: 250ms;
@@ -146,7 +151,7 @@
 	.contact {
 		display: flex;
 		flex-direction: column;
-		margin-left: 101px;
+		margin-left: 65px;
 		gap: 10px;
 		@include desktop {
 			flex-direction: row;
