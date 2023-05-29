@@ -166,7 +166,7 @@
 	opacity: 0;
 }
 .modal {
-	top: 50%;
+	top: 12%;
 	left: 50%;
 	width: 450px;
 	height: 609px;
@@ -181,6 +181,11 @@
 	visibility: visible;
 	display: block;
 	@include tablet {
+		top: 15%;
+	}
+	@include desktop {
+		width: 528px;
+		height: 582px;
 		top: 15%;
 	}
 	&__btn--close {

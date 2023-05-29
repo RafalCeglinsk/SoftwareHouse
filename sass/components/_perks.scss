@@ -65,4 +65,9 @@
 			flex-wrap: nowrap;
 		}
 	}
+	.perk {
+		&--description {
+			margin-bottom: 0px;
+		}
+	}
 }
